@@ -22,6 +22,11 @@ function GameId() {
       <div className="game-info">
         <div className="game-details">
           <h1>{game.title}</h1>
+
+          <div className="game-image">
+            <img src={game.thumbnail} alt={gameId} />
+          </div>
+
           <p>
             <strong>Descripción:</strong> {game.short_description}
           </p>
@@ -34,14 +39,11 @@ function GameId() {
           <p>
             <strong>Plataforma:</strong> {game.platform}
           </p>
-          <Link className="back-button" to="/">
-            VOLVER AL INICIO
-          </Link>
-        </div>
-        <div className="game-image">
-          <img src={game.thumbnail} alt={gameId} />
         </div>
       </div>
+      <Link className="back-button" to="/">
+        VOLVER AL INICIO
+      </Link>
     </div>
   );
 }

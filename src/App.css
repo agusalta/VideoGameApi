@@ -1,12 +1,11 @@
 .game-container {
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
   width: 300px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   gap: 30px;
   color: var(--color-text);
   transition: transform 0.3s ease;
-  margin-bottom: 15px;
 }
 
 .genre-list {
@@ -60,7 +59,8 @@
 
 .games-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 15px;
   overflow: hidden;
   justify-items: center;
 }
@@ -107,27 +107,30 @@
 /* Game By Id */
 
 .gameId-container {
-  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 2rem;
-  padding: 2rem;
+  justify-content: center;
+  height: 70vh;
 }
 
 .game-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-details {
-  padding-right: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+.game-image {
+  margin-top: 20px;
 }
 
 .game-image img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
+  margin: 0 auto;
 }
 
 .back-button {
