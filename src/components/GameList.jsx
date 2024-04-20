@@ -6,6 +6,7 @@ import SearchBar from "./SearchBar";
 
 function GameList() {
   const [searchGame, setSearchGame] = useState("");
+
   const { data } = useContext(MyContext);
 
   const handleSearch = event => {
@@ -17,6 +18,26 @@ function GameList() {
   return (
     <main className="app-container">
       <SearchBar search={handleSearch} />
+
+      <section className="genre-list">
+        {data &&
+          data
+            .filter(
+              (game, index, array) =>
+                array.findIndex(g => g.genre === game.genre) === index
+            )
+            .map(game => (
+              <div key={game.id}>
+                <Link
+                  className="genre-list__li"
+                  to={`/genres/${game.genre}`}
+                >
+                  {game.genre}
+                </Link>
+              </div>
+            ))}
+      </section>
+
       <section className="games-container">
         {!data ? (
           <p>Cargando...</p>
@@ -26,7 +47,7 @@ function GameList() {
               data.map(item => (
                 <Link
                   style={{ textDecoration: "none" }}
-                  to={`/${item.id}`}
+                  to={`/games/${item.id}`}
                   key={item.id}
                 >
                   <Game
@@ -50,7 +71,7 @@ function GameList() {
                 .map(item => (
                   <Link
                     style={{ textDecoration: "none" }}
-                    to={`/${item.id}`}
+                    to={`/games/${item.id}`}
                     key={item.id}
                   >
                     <Game

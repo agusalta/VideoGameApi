@@ -1,17 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Kode+Mono:wght@400..700&display=swap");
+
+@font-face {
+  font-family: "Kode Mono";
+  src: url("./assets//Kode_Mono/KodeMono-VariableFont_wght.ttf");
+}
+
 :root {
-  --color-primary: black;
-  --color-secondary: black;
-  --color-tertiary: black;
-  --color-text: black;
+  --color-primary: #1a1a1a;
+  --color-text: white;
+  --background-color: rgb(215, 64, 64);
+}
+
+html {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: "Kode Mono";
+}
+
+li {
+  color: var(--color-text);
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(254,254,254);
-  background: linear-gradient(176deg, rgba(254,254,254,1) 65%, rgba(201,201,201,1) 86%); 
 }

@@ -17,7 +17,7 @@ function Game({
         <strong>Descripción:</strong> {short_description}
       </p>
       <p>
-        <strong>Genero:</strong> {genre}
+        <strong>Género:</strong> {genre}
       </p>
       <p>
         <strong>Fecha de lanzamiento:</strong> {release_date}

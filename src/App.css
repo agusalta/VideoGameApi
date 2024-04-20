@@ -9,6 +9,27 @@
   margin-bottom: 15px;
 }
 
+.genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  font-size: 24px;
+  padding: 2rem;
+}
+
+.genre-list__li {
+  text-decoration: none;
+  list-style: none;
+  color: var(--background-color);
+}
+
+.genre-list__li:hover {
+  color: var(--color-text);
+}
+
 .game-container h2 {
   text-transform: uppercase;
 }
@@ -45,6 +66,7 @@
 }
 
 .app-container h1 {
+  color: var(--color-text);
   text-align: center;
 }
 
@@ -53,13 +75,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: rgb(215, 64, 64);
   z-index: 1000;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+#buscador h1 {
+  color: var(--color-text);
+  font-size: 30px;
+  text-align: center;
 }
 
 #buscador input {
@@ -70,6 +98,10 @@
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s;
+}
+
+.free {
+  color: var(--color-primary);
 }
 
 /* Game By Id */
@@ -96,4 +128,20 @@
 .game-image img {
   max-width: 100%;
   height: auto;
+}
+
+.back-button {
+  display: flex;
+  justify-content: left;
+  bottom: 0;
+  align-items: center;
+  position: fixed;
+  border-radius: 30px;
+  color: var(--color-text);
+  background-color: var(--background-color);
+  text-decoration: none;
+  list-style: none;
+  padding: 1rem;
+  margin: 1rem;
+  z-index: 1000;
 }

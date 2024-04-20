@@ -5,7 +5,7 @@ export const MyContext = createContext();
 
 export const MyContextProvider = ({ children }) => {
   const [data, setData] = useState(null);
-  
+
   useEffect(() => {
     let mounted = true;
 

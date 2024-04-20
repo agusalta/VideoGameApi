@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import Game from "./components/Game";
 import GameList from "./components/GameList";
 import { MyContextProvider } from "./hooks/Context";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GameId from "./components/GameId";
+import Genre from "./components/Genre";
 
 function App() {
   return (
@@ -15,8 +15,11 @@ function App() {
             <Route exact path="/">
               <GameList />
             </Route>
-            <Route path="/:gameId">
+            <Route path="/games/:gameId">
               <GameId />
+            </Route>
+            <Route path="/genres/:gameGenre">
+              <Genre />
             </Route>
           </Switch>
         </div>

@@ -26,7 +26,7 @@ function GameId() {
             <strong>Descripción:</strong> {game.short_description}
           </p>
           <p>
-            <strong>Genero:</strong> {game.genre}
+            <strong>Género:</strong> {game.genre}
           </p>
           <p>
             <strong>Fecha de lanzamiento:</strong> {game.release_date}
@@ -34,7 +34,9 @@ function GameId() {
           <p>
             <strong>Plataforma:</strong> {game.platform}
           </p>
-          <Link to="/">VOLVER AL INICIO</Link>
+          <Link className="back-button" to="/">
+            VOLVER AL INICIO
+          </Link>
         </div>
         <div className="game-image">
           <img src={game.thumbnail} alt={gameId} />

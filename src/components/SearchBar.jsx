@@ -3,7 +3,9 @@ import React from "react";
 function SearchBar({ search }) {
   return (
     <section id="buscador">
-      <h1>JUEGOSJUEGOS.com</h1>
+      <h1>
+        JUEGOS<strong className="free">FREE</strong>.com
+      </h1>
       <input
         id="input-buscador__juegos"
         type="search"
