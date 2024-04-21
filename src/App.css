@@ -9,20 +9,29 @@
 }
 
 .genre-list {
+  position: absolute;
+  top: 0;
+  padding: 4rem;
+  width: 100%;
+}
+
+.genre-list div {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
   font-size: 24px;
-  padding: 2rem;
+  color: var(--color-text);
+  background-color: var(--background-color);
 }
 
 .genre-list__li {
   text-decoration: none;
   list-style: none;
-  color: var(--background-color);
+  padding: 5px;
+  color: var(--color-text);
 }
 
 .genre-list__li:hover {
@@ -53,16 +62,14 @@
   margin-bottom: 5px;
 }
 
-.app-container {
-  margin: 8rem;
-}
-
 .games-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 15px;
   overflow: hidden;
   justify-items: center;
+  margin: 1.5rem;
+  margin-top: 6rem;
 }
 
 .app-container h1 {
@@ -81,7 +88,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 #buscador h1 {
@@ -96,6 +103,7 @@
   border: 2px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  font-family: "Kode Mono";
   outline: none;
   transition: border-color 0.3s;
 }
@@ -147,4 +155,19 @@
   padding: 1rem;
   margin: 1rem;
   z-index: 1000;
+}
+
+@media (max-width: 1250px) {
+  #buscador h1 {
+    font-size: 5vmin;
+  }
+
+  #buscador {
+    padding-bottom: 2rem;
+  }
+
+  .genre-list div {
+    font-size: 4vmin;
+    gap: 1vmin;
+  }
 }

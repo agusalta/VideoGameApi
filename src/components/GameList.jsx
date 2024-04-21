@@ -19,25 +19,6 @@ function GameList() {
     <main className="app-container">
       <SearchBar search={handleSearch} />
 
-      <section className="genre-list">
-        {data &&
-          data
-            .filter(
-              (game, index, array) =>
-                array.findIndex(g => g.genre === game.genre) === index
-            )
-            .map(game => (
-              <div key={game.id}>
-                <Link
-                  className="genre-list__li"
-                  to={`/genres/${game.genre}`}
-                >
-                  {game.genre}
-                </Link>
-              </div>
-            ))}
-      </section>
-
       <section className="games-container">
         {!data ? (
           <p>Cargando...</p>
