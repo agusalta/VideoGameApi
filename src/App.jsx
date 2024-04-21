@@ -5,6 +5,7 @@ import { MyContextProvider } from "./hooks/Context";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GameId from "./components/GameId";
 import Genre from "./components/Genre";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (

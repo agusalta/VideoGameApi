@@ -19,27 +19,25 @@ function GameId() {
 
   return (
     <div className="gameId-container">
-      <div className="game-info">
-        <div className="game-details">
-          <h1>{game.title}</h1>
+      <div className="game-details">
+        <h1>{game.title}</h1>
 
-          <div className="game-image">
-            <img src={game.thumbnail} alt={gameId} />
-          </div>
-
-          <p>
-            <strong>Descripción:</strong> {game.short_description}
-          </p>
-          <p>
-            <strong>Género:</strong> {game.genre}
-          </p>
-          <p>
-            <strong>Fecha de lanzamiento:</strong> {game.release_date}
-          </p>
-          <p>
-            <strong>Plataforma:</strong> {game.platform}
-          </p>
+        <div className="game-image">
+          <img src={game.thumbnail} alt={gameId} />
         </div>
+
+        <p>
+          <strong>Descripción:</strong> {game.short_description}
+        </p>
+        <p>
+          <strong>Género:</strong> {game.genre}
+        </p>
+        <p>
+          <strong>Fecha de lanzamiento:</strong> {game.release_date}
+        </p>
+        <p>
+          <strong>Plataforma:</strong> {game.platform}
+        </p>
       </div>
       <Link className="back-button" to="/">
         VOLVER AL INICIO
